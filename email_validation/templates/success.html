@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Email Validation With DB Success</title>
+</head>
+<body>
+  <p>The email address that you entered {{email}} is a VALID email address.</p>
+  <p>Thank you.</p>
+
+  <p><b>Email Addresses Entered</b></p>
+  <table>
+  {% for email in all_emails: %}
+    <tr>
+      <td>{{email['email']}}</td>
+      <td>{{email['created_at']}}</td>
+    </tr>
+  {% endfor %}
+  </table>
+
+
+</body>
+</html>
